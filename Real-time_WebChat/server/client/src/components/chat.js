@@ -59,8 +59,9 @@ const Chat=()=>{
                 <div className="messages">
                     {chats.map((chat)=>{
                         return (
-                            chat.sentBy._id===state._id?<div key={chat._id} className="chatRight"><span className="name">{chat.sentBy.name} -  </span>{chat.message} </div>
-                        :<div key={chat._id} className="chatLeft"><span className="name">{chat.sentBy.name} -  </span>{chat.message} </div>
+                            chat.sentBy._id===state._id?<>  
+                            <div key={chat._id} className="chatRight"><span className="name">{chat.sentBy.name} -  </span>{chat.message} </div></>
+                        :<><div key={chat._id} className="chatLeft"><span className="name">{chat.sentBy.name} -  </span>{chat.message} </div></>
                         )
                         
                     })}
