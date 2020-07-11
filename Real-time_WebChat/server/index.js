@@ -1,6 +1,6 @@
 const express =require("express");
 const app=express();
-const PORT=process.env.port||3001
+const PORT=process.env.PORT||3001
 const http=require('http').Server(app);
 const io=require('socket.io')(http);
 const mongoose=require('mongoose');
